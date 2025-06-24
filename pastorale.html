@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pastorale – Paroisse Don Bosco Kara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #251c0700; }
+    header { background-image: url('IMAGE/img en tete.jpg'); color: #141672;background-color: #333; padding: 2rem 1rem 1rem 1rem; text-align: center; }
+    header img { height: 70px; margin-bottom: 0.5rem; display: block; margin-left: auto; margin-right: auto; }
+    nav { background: #003f6b; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: #ffd700; }
+    .container { max-width: 1000px; margin: 2rem auto; background: #fff; padding: 2.5rem 2rem; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08);}
+    h2 { color: #005baa; margin-top: 0; }
+    .parish-hero { display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; margin-bottom: 2.5rem; }
+    .parish-hero img { width: 340px; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,91,170,0.10);}
+    .parish-hero-content { flex: 1; min-width: 260px; }
+    .parish-hero-content h2 { margin-top: 0; }
+    .parish-hero-content p { font-size: 1.13rem; color: #333; }
+    .action-links { display: flex; gap: 1.5rem; justify-content: center; margin: 2.5rem 0 2.5rem 0; flex-wrap: wrap; }
+    .action-link { background: linear-gradient(90deg,#005baa 60%,#0072ce 100%); color: #fff; padding: 0.9rem 2rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 8px rgba(0,91,170,0.08); transition: background 0.2s, transform 0.2s; display: flex; align-items: center; gap: 0.7rem; }
+    .action-link:hover { background: linear-gradient(90deg,#0072ce 60%,#005baa 100%); transform: translateY(-3px) scale(1.04); color: #fff; text-decoration: none; }
+    .action-link img { width: 26px; height: 26px; vertical-align: middle; }
+    .dynamic-section { margin-top: 2.5rem; padding: 1.5rem; background: #f1f6fa; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,91,170,0.06); display: none; animation: fadeIn 0.6s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .show { display: block; }
+    .dynamic-section h3 { color: #005baa; margin-top: 0; }
+    .dynamic-section p { color: #333; }
+    .dynamic-section .placeholder { color: #888; font-style: italic; margin-top: 1rem; }
+    .parish-values { margin: 2.5rem 0 1.5rem 0; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;}
+    .parish-value { background: #e9ecef; border-radius: 10px; padding: 1.2rem 1.5rem; min-width: 220px; max-width: 320px; text-align: center; box-shadow: 0 1px 6px rgba(0,91,170,0.06);}
+    .parish-value h4 { color: #0072ce; margin-bottom: 0.5rem;}
+    .parish-value p { color: #444; font-size: 1.05rem;}
+    .quote { font-style: italic; color: #0072ce; margin: 2.5rem 0 1.5rem 0; text-align: center; font-size: 1.15rem;}
+    footer { background: #003f6b; color: #fff; text-align: center; padding: 2rem 1rem 1rem 1rem; margin-top: 2rem; border-radius: 0 0 10px 10px;}
+    .footer-social { margin: 1rem 0; }
+    .footer-social a { display: inline-block; margin: 0 0.5rem; }
+    .footer-social img { width: 32px; height: 32px; vertical-align: middle; }
+    .footer-contact { margin-top: 1rem; font-size: 1.05rem; }
+    @media (max-width: 900px) {
+      .parish-hero { flex-direction: column; }
+      .container { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+     <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem;">
+    
+    <div style="flex:1; text-align:center;">
+    <img src="logo/logo.jpg" alt="Logo AOS" style="height:90px;">
+    <h1>Paroisse Saint Jean Bosco Kara</h1>
+    <h1>Province Saint joseph</h1>
+    <p>Foi, Espérance et Charité au cœur de Kara</p>
+     </div>
+    
+  </div>
+  </header>
+  <nav>
+  <a href="index.html">Accueil</a>
+  <a href="paroisse.html">Paroisse</a>
+  <a href="centre-formation.html">Centre de Formation</a>
+  <a href="college-lycee.html">Collège & Lycée</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Foyer ▼</a>
+    <div class="dropdown-content">
+      <a href="foyer-immaculee.html">Foyer Immaculée</a>
+      <a href="foyer-jean-paul-ii.html">Foyer Jean Paul II</a>
+    </div>
+  </div>
+  <a href="oratorio.html">Oratorio</a>
+  <a href="pastorale.html">Pastorale</a>
+  <a href="autres.html">Autres</a>
+  <a href="actualité.html">Actualités</a>
+</nav>
+<style>
+  nav {
+    position: relative;
+    z-index: 10;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropbtn {
+    color: #fff;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #005baa;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    border-radius: 0 0 8px 8px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+  .dropdown-content a {
+    color: #fff;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid #0072ce;
+    transition: background 0.2s;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-content a:hover {
+    background: #0072ce;
+    color: #ffd700;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  /* Pour garder l'alignement des liens */
+  nav > a, nav > .dropdown {
+    vertical-align: middle;
+  }
+</style>
+  <div class="container">
+    <div class="pastorale-hero">
+            <img src="pstoral/WhatsApp Image 2025-06-17 à 12.19.08_e371e24a.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+
+      <div class="pastorale-hero-content">
+        <h2>La Pastorale à Saint Jean Bosco Kara</h2>
+        <p>
+          La Pastorale de la Paroisse saint Jean Bosco de Kara accompagne les jeunes, les familles et toute la communauté dans leur cheminement de foi. Elle propose des activités spirituelles, éducatives et sociales pour grandir ensemble dans l’esprit de saint Jean Bosco, à l’écoute de l’Évangile et au service des autres.
+          La coordination de la pastorale des jeunes est une coordination qui s'occupe de la gestion des de tous les mouvements jeunes sur une paroisse.
+Piloter par un bureau et un Père Aumônier, les activités de la pastorale embrassent plusieurs domaines tel que : la formation humaine et sociale, la culture, le sport, le tourisme, etc.
+Il faut rappeler que le bureau et le Père Aumônier rendent compte au Curé de la paroisse sur la vie des mouvements jeunes
+        </p>
+        <ul style="color:#333; font-size:1.08rem; margin:1.2rem 0 0 1.2rem;">
+          <li><strong>Catéchèse :</strong> préparation aux sacrements, groupes bibliques, formation chrétienne.</li>
+          <li><strong>Groupes de jeunes :</strong> MEJ, scouts, chorales, mouvements salésiens.</li>
+          <li><strong>Actions solidaires :</strong> visites aux malades, aide aux plus démunis, engagement social.</li>
+          <li><strong>Temps forts :</strong> retraites, pèlerinages, veillées de prière, fêtes liturgiques.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pastorale-values">
+      <div class="pastorale-value">
+        <h4>Accompagnement</h4>
+        <p>Un soutien spirituel et humain pour chaque étape de la vie.</p>
+      </div>
+      <div class="pastorale-value">
+        <h4>Éducation à la foi</h4>
+        <p>Des parcours adaptés pour enfants, jeunes et adultes.</p>
+      </div>
+      <div class="pastorale-value">
+        <h4>Engagement</h4>
+        <p>Vivre la foi dans l’action et la solidarité.</p>
+      </div>
+    </div>
+    <div class="quote">
+      « Avec Don Bosco, éduquer c’est une affaire de cœur. »
+    </div>
+    <div class="action-links">
+      <a href="pastorale-images.html" class="action-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" alt="Voir les images">Voir les images
+      </a>
+      <a href="pastorale-videos.html" class="action-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Voir les vidéos">Voir les vidéos
+      </a>
+      <a href="pastorale-actualites.html" class="action-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Actualités">Actualités
+      </a>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-social">
+    <a href="https://www.facebook.com/Paroisse.JBK/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://wa.me/70239862" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    </div>      
+    <div class="footer-contact">
+      <strong>Adresse :</strong> Quartier Don Bosco, Kara, Togo<br>
+      <strong>Téléphone :</strong> +228 70239862<br>
+      <strong>Email :</strong> dt.kara.donbosco.aos@gmail.com
+    </div>
+    <div style="margin-top:1rem;">
+      &copy; 2025 Paroisse Don Bosco Kara. Tous droits réservés.
+    </div>
+  </footer>
+  <script>
+    // Menu déroulant dynamique pour "Foyer"
+    document.querySelectorAll('.dropdown').forEach(function(drop){
+      drop.addEventListener('mouseenter', function() {
+        this.querySelector('.dropdown-content').style.display = 'block';
+      });
+      drop.addEventListener('mouseleave', function() {
+        this.querySelector('.dropdown-content').style.display = 'none';
+      });
+      drop.querySelector('.dropbtn').addEventListener('focus', function() {
+        drop.querySelector('.dropdown-content').style.display = 'block';
+      });
+      drop.querySelector('.dropbtn').addEventListener('blur', function() {
+        setTimeout(() => drop.querySelector('.dropdown-content').style.display = 'none', 200);
+      });
+    });
+    // Scroll doux pour les ancres internes
+    document.querySelectorAll('a[href^="#"]').forEach(function(link){
+      link.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior: "smooth"});
+        }
+      });
+    });
+    // Affichage dynamique de l'année dans le footer
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelectorAll('footer').forEach(function(footer){
+        footer.innerHTML = footer.innerHTML.replace(/202\d/, year);
+      });
+    });
+  </script>
+  <script src="java.js"></script>
+
+</body>
+</html>

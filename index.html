@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Paroisse Saint Jean Bosco Kara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #462b2b; }
+    header { background-image: url('IMAGE/img en tete.jpg'); color: #0e2e85;background-color: #312e2e; padding: 2rem 1rem; text-align: center; }
+    nav { background: #003f6b; padding: 1rem; text-align: center; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width:100%; margin: 2rem auto; background: #312e2e; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+    h2 { color: #005baa; }
+   
+    footer { background: #003f6b; color: #fff; text-align: center; padding: 2rem 1rem 1rem 1rem; margin-top: 2rem; border-radius: 0 0 10px 10px;}
+    .footer-social { margin: 1rem 0; }
+    .footer-social a { display: inline-block; margin: 0 0.5rem; }
+    .footer-social img { width: 32px; height: 32px; vertical-align: middle; }
+    .footer-contact { margin-top: 1rem; font-size: 1.05rem; }
+    @media (max-width: 900px) {
+      .parish-hero { flex-direction: column; }
+      .container { padding: 1.2rem; }
+    }
+  </style>
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Font Awesome pour les icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem;">
+    
+    <div style="flex:1; text-align:center;">
+    <img src="logo/logo.jpg" alt="Logo AOS" style="height:90px;">
+
+    <h1>Mission Salésienne de Don Bosco Kara</h1>
+    <h1>Province saint joseph </h1>
+    
+     </div>
+  
+  </div>
+  </header>
+
+ <nav>
+  <a href="index.html">Accueil</a>
+  <a href="paroisse.html">Paroisse</a>
+  <a href="centre-formation.html">Centre de Formation</a>
+  <a href="college-lycee.html">Collège & Lycée</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Foyer ▼</a>
+    <div class="dropdown-content">
+      <a href="foyer-immaculee.html">Foyer Immaculée</a>
+      <a href="foyer-jean-paul-ii.html">Foyer Jean Paul II</a>
+    </div>
+  </div>
+  <a href="oratorio.html">Oratorio</a>
+  <a href="pastorale.html">Pastorale</a>
+  <a href="autres.html">Autres</a>
+  <a href="actualité.html">Actualités</a>
+  <a href="ONG.html">ONG</a>
+</nav>
+<style>
+  nav {
+    position: relative;
+    z-index: 10;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropbtn {
+    color: #fff;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #005baa;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    border-radius: 0 0 8px 8px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+  .dropdown-content a {
+    color: #fff;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid #0072ce;
+    transition: background 0.2s;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-content a:hover {
+    background: #0072ce;
+    color: #ffd700;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  /* Pour garder l'alignement des liens */
+  nav > a, nav > .dropdown {
+    vertical-align: middle;
+  }
+</style>
+  <div class="container">
+   
+    <section id="parish-hero" style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; margin-bottom: 2.5rem;">
+      <!-- Début du carrousel d'images -->
+      <div id="carousel" style="position:relative; width: 100%;  margin:0 auto;">
+        <img id="carousel-img" src="IMAGE/img/acceuil image1 (1).jpg" alt="Image 1" style="width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); transition:opacity 0.5s;">
+        <button id="prev-btn" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); background:#005baa; color:#fff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5rem; cursor:pointer; opacity:0.7;">&#8592;</button>
+        <button id="next-btn" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); background:#005baa; color:#fff; border:none; border-radius:50%; width:36px; height:36px; font-size:1.5rem; cursor:pointer; opacity:0.7;">&#8594;</button>
+      </div>
+      <script>
+        // Images à faire défiler (ajoute/modifie les chemins selon tes images)
+        const images = [
+          "IMAGE/img/acceuil image1 (1).jpg",
+          "IMAGE/img/Acceueil (2).jpg",
+          "IMAGE/img/Acceueil.jpg",
+          "IMAGE/img/WhatsApp Image 2025-06-16 à 08.22.11_dffd8de1.jpg",
+          "IMAGE/img/acceuilD.jpg",
+          "IMAGE/img/WhatsApp Image 2025-06-17 à 11.09.43_1ac1079f.jpg",
+          "paroisseplus/WhatsApp Image 2025-06-17 à 18.26.49_64d5305d.jpg",
+          
+
+          // Ajoute d'autres images ici si besoin
+        ];
+        let current = 0;
+        const imgEl = document.getElementById('carousel-img');
+        document.getElementById('prev-btn').onclick = function() {
+          current = (current - 1 + images.length) % images.length;
+          imgEl.style.opacity = 0.3;
+          setTimeout(() => {
+            imgEl.src = images[current];
+            imgEl.style.opacity = 1;
+          }, 200);
+        };
+        document.getElementById('next-btn').onclick = function() {
+          current = (current + 1) % images.length;
+          imgEl.style.opacity = 0.3;
+          setTimeout(() => {
+            imgEl.src = images[current];
+            imgEl.style.opacity = 1;
+          }, 200);
+        };
+        // Défilement automatique toutes les 5 secondes
+        setInterval(() => {
+          document.getElementById('next-btn').click();
+        }, 5000);
+      </script>
+      <!-- Fin du carrousel d'images -->
+    </section>
+     <section id="objectif">
+      <h2>
+        Renseignement sur les activités que les Salésiens mènent à Kara dans les différents secteurs :
+        Paroisse, Centre de Formation Professionnelle et Technique, Collège et Lycée Don Bosco,
+        Foyer Immaculée et Foyer Jean Paul II, Oratorio - Centre des jeunes, Pastorale et autres.
+      </h2>
+    </section>
+    <!-- Ajoute ceci juste avant </footer> dans ton fichier index.html -->
+<section id="contact" class="contact-section">
+  <h2 style="text-align:center; margin-bottom:1.5rem;">Contactez-nous</h2>
+  <form class="contact-form" onsubmit="return sendToWhatsApp(event)" autocomplete="off" style="background:#462b2b; border-radius:12px; box-shadow:0 4px 16px rgba(0,91,170,0.08); padding:2rem 2.5rem; max-width:520px; margin:0 auto;">
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom:1rem;">
+      <div style="flex:1; min-width: 180px;">
+        <label for="nom" style="font-weight:600; color:#005baa;">Nom <span style="color:red">*</span></label>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required style="width:100%; padding:0.7rem; border:1.5px solid #cfd8dc; border-radius:6px; margin-top:0.3rem; font-size:1rem;">
+      </div>
+      <div style="flex:1; min-width: 180px;">
+        <label for="email" style="font-weight:600; color:#005baa;">Email <span style="color:red">*</span></label>
+        <input type="email" id="email" name="email" placeholder="votre@email.com" required style="width:100%; padding:0.7rem; border:1.5px solid #cfd8dc; border-radius:6px; margin-top:0.3rem; font-size:1rem;">
+      </div>
+    </div>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom:1rem;">
+      <div style="flex:1; min-width: 180px;">
+        <label for="telephone" style="font-weight:600; color:#005baa;">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro" style="width:100%; padding:0.7rem; border:1.5px solid #cfd8dc; border-radius:6px; margin-top:0.3rem; font-size:1rem;">
+      </div>
+      <div style="flex:1; min-width: 180px;">
+        <label for="objet" style="font-weight:600; color:#005baa;">Objet <span style="color:red">*</span></label>
+        <input type="text" id="objet" name="objet" placeholder="Sujet de votre message" required style="width:100%; padding:0.7rem; border:1.5px solid #cfd8dc; border-radius:6px; margin-top:0.3rem; font-size:1rem;">
+      </div>
+    </div>
+    <label for="message" style="font-weight:600; color:#005baa;">Message <span style="color:red">*</span></label>
+    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required style="width:100%; padding:0.7rem; border:1.5px solid #cfd8dc; border-radius:6px; margin-top:0.3rem; font-size:1rem; resize:vertical; margin-bottom:1.2rem;"></textarea>
+    <button type="submit" style="background:linear-gradient(90deg,#005baa 60%,#0072ce 100%); color:#fff; border:none; padding:0.9rem 2.5rem; border-radius:6px; font-size:1.1rem; font-weight:600; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px rgba(0,91,170,0.08); transition:background 0.2s;">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:22px; vertical-align:middle; margin-right:8px;">Envoyer via WhatsApp
+    </button>
+  </form>
+</section>
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  const nom = document.getElementById('nom').value;
+  const email = document.getElementById('email').value;
+  const telephone = document.getElementById('telephone').value;
+  const objet = document.getElementById('objet').value;
+  const message = document.getElementById('message').value;
+  // Remplacez le numéro ci-dessous par celui de la paroisse au format international sans +
+  const phone = '22890415752'; // Exemple : 22890123456 pour le Togo
+  const text = encodeURIComponent(
+    `Nouveau message depuis le site Paroisse Don Bosco Kara:\n\nNom: ${nom}\nEmail: ${email}\nTéléphone: ${telephone}\nObjet: ${objet}\nMessage: ${message}`
+  );
+  window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+  return false;
+}
+</script>
+  </div>
+  <footer>
+    <div class="footer-social">
+    <a href="https://www.facebook.com/Paroisse.JBK/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://wa.me/70239862" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    </div>      
+    <div class="footer-contact">
+      <strong>Adresse :</strong> Quartier Don Bosco, Kara, Togo<br>
+      <strong>Téléphone :</strong> +228 70239862<br>
+      <strong>Email :</strong> dt.kara.donbosco.aos@gmail.com
+    </div>
+    <div style="margin-top:1rem;">
+      &copy; 2025 Paroisse Don Bosco Kara. Tous droits réservés.
+    </div>
+  </footer>
+  <script>
+// --- Menu déroulant responsive pour "Foyer" ---
+document.querySelectorAll('.dropdown').forEach(function(drop){
+  drop.addEventListener('mouseenter', function() {
+    this.querySelector('.dropdown-content').style.display = 'block';
+  });
+  drop.addEventListener('mouseleave', function() {
+    this.querySelector('.dropdown-content').style.display = 'none';
+  });
+  // Accessibilité clavier
+  drop.querySelector('.dropbtn').addEventListener('focus', function() {
+    drop.querySelector('.dropdown-content').style.display = 'block';
+  });
+  drop.querySelector('.dropbtn').addEventListener('blur', function() {
+    setTimeout(() => drop.querySelector('.dropdown-content').style.display = 'none', 200);
+  });
+});
+
+// --- Scroll doux pour les ancres internes ---
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click', function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior: "smooth"});
+    }
+  });
+});
+
+// --- Affichage dynamique de l'année dans le footer ---
+document.addEventListener('DOMContentLoaded', function() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('footer').forEach(function(footer){
+    footer.innerHTML = footer.innerHTML.replace(/202\d/, year);
+  });
+});
+
+// --- Menu mobile (si besoin, à adapter selon ton HTML) ---
+if(window.innerWidth < 900){
+  const nav = document.querySelector('nav');
+  if(nav && !document.getElementById('menu-toggle')){
+    const btn = document.createElement('button');
+    btn.id = 'menu-toggle';
+    btn.textContent = '☰ Menu';
+    btn.style = 'background:#0072ce;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1.2rem;margin-bottom:1rem;cursor:pointer;';
+    nav.parentNode.insertBefore(btn, nav);
+    nav.style.display = 'none';
+    btn.onclick = function(){
+      nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+    };
+  }
+}
+</script>
+<!-- Loader animé -->
+<div id="loader" style="position:fixed;inset:0;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center;">
+  <div style="border:6px solid #eee;border-top:6px solid #0072ce;border-radius:50%;width:48px;height:48px;animation:spin 1s linear infinite;"></div>
+</div>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  window.addEventListener('load',function(){document.getElementById('loader').style.display='none';});
+  window.onscroll = function() {
+    document.getElementById('topBtn').style.display = window.scrollY > 200 ? 'block' : 'none';
+  };
+  document.getElementById('topBtn').onclick = function() {
+    window.scrollTo({top:0, behavior:'smooth'});
+  };
+</script>
+<!-- Bouton retour en haut -->
+<button id="topBtn" style="display:none;position:fixed;bottom:30px;right:30px;z-index:1000;background:#0072ce;color:#fff;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5rem;box-shadow:0 2px 8px rgba(0,91,170,0.15);cursor:pointer;">
+  <i class="fa fa-arrow-up"></i>
+</button>
+<script src="java.js"></script>
+</body>
+</html>
