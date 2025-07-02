@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie Collège & Lycée - Mission Salésienne Don Bosco Kara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header style="background: #fff; padding: 1.5rem 0 0 0; border-bottom: 8px solid #b71c1c;">
+    <div style="display: flex; align-items: center; justify-content: center; max-width: 1200px; margin: 15px auto;">
+      <img src="logo/logo.png" alt="Logo Mission Salésienne Don Bosco Kara" style="height: 80px;">
+    </div>
+    <div style="width:100%;overflow:hidden;margin-top:0;">
+      <img src="IMAGE/img%20en%20tete.jpg" alt="Bannière Don Bosco Kara" style="width:100%;display:block;object-fit:cover;max-height:350px;">
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+        <a href="ong.html">ONG</a>
+      <a href="paroisse.html">Paroisse</a>
+      <a href="centre-formation.html">Centre de Formation</a>
+      <a href="college-lycee.html">Collège & Lycée</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Foyer ▼</a>
+        <div class="dropdown-content">
+          <a href="foyer-immaculee.html">Foyer Immaculée</a>
+          <a href="foyer-jean-paul-ii.html">Foyer Jean Paul II</a>
+        </div>
+      </div>
+      <a href="oratorio.html">Oratorio</a>
+      <a href="pastorale.html">Pastorale</a>
+      <a href="actualité.html">Actualités</a>
+      <a href="autres.html">Autres</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Galerie d'Images - Collège & Lycée</h2>
+    <div class="gallery-grid">
+      <!-- Exemple d'images, à remplacer par vos propres images -->
+      <div class="gallery-item">
+        <img src="IMAGE/img/lcycee.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMAGE/img/licee.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMAGE/img/lyboco.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMAGE/img/lycer.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMAGE/img/lyceei.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="IMAGE/img/lyceeee.jpg" alt=""style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-bottom:1rem;">
+        <div class="caption"></div>
+      </div>
+      <!-- Ajoute d'autres images ici -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-social">
+    <a href="https://www.facebook.com/Paroisse.JBK/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+       <a href="https://wa.me/70239862" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://www.tiktok.com/@paroisse.saint.je4?_t=ZM-8xU39hlMXK9&_r=1" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="32" height="32">
+      </a>
+    </div>      
+    <div class="footer-contact">
+      <strong>Adresse :</strong> Quartier Don Bosco, Kara, Togo<br>
+      <strong>Téléphone :</strong> +228 70239862<br>
+      <strong>Email :</strong> dt.kara.donbosco.aos@gmail.com
+    </div>
+    <div style="margin-top:1rem;">
+      &copy; 2025 Paroisse Don Bosco Kara. Tous droits réservés.
+    </div>
+  </footer>
+  <script>
+    const AUTHORIZED_PASSWORD = "donbosco2025";
+    let isAuthorized = false;
+
+    function showAddVideoForm() {
+      document.querySelector('.add-video').style.display = 'block';
+      renderVideoGallery();
+    }
+
+    function hideAddVideoForm() {
+      document.querySelector('.add-video').style.display = 'none';
+      renderVideoGallery();
+    }
+
+    function askPassword() {
+      const pwd = prompt("Veuillez entrer le mot de passe pour ajouter/supprimer des vidéos :");
+      if (pwd === AUTHORIZED_PASSWORD) {
+        isAuthorized = true;
+        showAddVideoForm();
+      } else {
+        isAuthorized = false;
+        hideAddVideoForm();
+        alert("Accès refusé.");
+      }
+    }
+
+    function saveVideosToStorage(videos) {
+      localStorage.setItem('college_lycee_gallery_videos', JSON.stringify(videos));
+    }
+
+    function loadVideosFromStorage() {
+      const data = localStorage.getItem('college_lycee_gallery_videos');
+      return data ? JSON.parse(data) : [];
+    }
+
+    function renderVideoGallery() {
+      const gallery = document.getElementById('video-gallery');
+      gallery.innerHTML = '';
+      const videos = loadVideosFromStorage();
+      videos.forEach((vid, idx) => {
+        const div = document.createElement('div');
+        div.className = 'video-item';
+        div.innerHTML = `
+          ${getVideoEmbed(vid.url)}
+          <div class="caption">${vid.caption || ''}</div>
+          ${isAuthorized ? `<button class="delete-btn" onclick="deleteVideo(${idx})">Supprimer</button>` : ''}
+        `;
+        gallery.appendChild(div);
+      });
+      renderVideoTable();
+    }
+
+     function getVideoEmbed(url) {
+    // YouTube
+    const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+    if (yt) {
+      // Affiche la miniature YouTube cliquable
+      return `<a href="${url}" target="_blank" style="display:inline-block;">
+        <img src="https://img.youtube.com/vi/${yt[1]}/hqdefault.jpg" alt="Miniature vidéo" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+      </a>`;
+    }
+    // Vimeo
+    const vimeo = url.match(/vimeo\.com\/(\d+)/);
+    if (vimeo) {
+      // Utilise la vignette Vimeo via un service tiers (pas d'API officielle sans accès)
+      const vimeoId = vimeo[1];
+      const thumbUrl = `https://vumbnail.com/${vimeoId}.jpg`;
+      return `<a href="${url}" target="_blank" style="display:inline-block;">
+        <img src="${thumbUrl}" alt="Miniature vidéo" style="width:100%;height:200px;object-fit:cover;border-radius:8px;">
+      </a>`;
+    }
+    // MP4 direct link
+    if (url.endsWith('.mp4')) {
+      // Affiche une icône vidéo générique
+      return `<a href="${url}" target="_blank" style="display:inline-block;">
+        <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Vidéo" style="width:50%;height:100px;object-fit:contain;background:#eee;border-radius:8px;">
+      </a>`;
+    }
+    // Autre
+    return `<a href="${url}" target="_blank" style="display:inline-block;">
+      <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Vidéo" style="width:50%;height:100px;object-fit:contain;background:#eee;border-radius:8px;">
+    </a>`;
+  }
+
+    function renderVideoTable() {
+      const videos = loadVideosFromStorage();
+      const container = document.getElementById('video-table-container');
+      if (!isAuthorized || videos.length === 0) {
+        container.innerHTML = '';
+        return;
+      }
+      let html = `<table>
+        <thead>
+          <tr>
+            <th>Vidéo</th>
+            <th>Lien</th>
+            <th>Légende</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>`;
+      videos.forEach((vid, idx) => {
+        html += `<tr>
+          <td>${getVideoEmbed(vid.url)}</td>
+          <td style="word-break:break-all;">${vid.url}</td>
+          <td>${vid.caption || ''}</td>
+          <td>
+            <button class="delete-btn" onclick="deleteVideo(${idx})">Supprimer</button>
+          </td>
+        </tr>`;
+      });
+      html += `</tbody></table>`;
+      container.innerHTML = html;
+    }
+
+    function addVideo() {
+      if (!isAuthorized) {
+        alert("Vous n'êtes pas autorisé à ajouter des vidéos.");
+        return;
+      }
+      const url = document.getElementById('videoUrl').value.trim();
+      const caption = document.getElementById('videoCaption').value.trim();
+      if (!url) return alert("Veuillez entrer le lien de la vidéo.");
+      const videos = loadVideosFromStorage();
+      videos.push({ url, caption });
+      saveVideosToStorage(videos);
+      renderVideoGallery();
+      document.getElementById('videoUrl').value = '';
+      document.getElementById('videoCaption').value = '';
+    }
+
+    function deleteVideo(idx) {
+      if (!isAuthorized) {
+        alert("Vous n'êtes pas autorisé à supprimer des vidéos.");
+        return;
+      }
+      if (!confirm("Voulez-vous vraiment supprimer cette vidéo ?")) return;
+      const videos = loadVideosFromStorage();
+      videos.splice(idx, 1);
+      saveVideosToStorage(videos);
+      renderVideoGallery();
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      renderVideoGallery();
+      hideAddVideoForm();
+      // Affiche un bouton pour demander l'accès
+      const btn = document.createElement('button');
+      btn.textContent = "Ajouter ou supprimer une vidéo (Accès réservé)";
+      btn.style = "margin:2rem auto;display:block;background:#0072ce;color:#fff;border:none;border-radius:6px;padding:0.7rem 2rem;font-weight:600;cursor:pointer;";
+      btn.onclick = askPassword;
+      document.querySelector('.add-video').parentNode.insertBefore(btn, document.querySelector('.add-video'));
+    });
+  </script>
+<script src="java.js"></script>
+
+</body>
+</html>
