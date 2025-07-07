@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Actualités – Foyer Jean Paul II Don Bosco Kara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f8f9fa; }
+    header {
+      background-image: url('img/en tete.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 91, 170, 0.45);
+      z-index: 2;
+      border-radius: inherit;
+    }
+    header > * { position: relative; z-index: 3; }
+    .container { max-width: 1100px; margin: 2rem auto; background: #fff; padding: 2.5rem 2rem; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08);}
+    h2 { color: #005baa; margin-top: 0; }
+    .news-list { margin: 2rem 0; }
+    .news-item { background: #f1f6fa; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,91,170,0.06); padding: 1.5rem; margin-bottom: 2rem; display: flex; gap: 2rem; align-items: flex-start; }
+    .news-img { width: 180px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,91,170,0.08);}
+    .news-content { flex: 1; }
+    .news-title { color: #0072ce; margin: 0 0 0.7rem 0; font-size: 1.25rem; }
+    .news-date { color: #888; font-size: 0.98rem; margin-bottom: 0.7rem; }
+    .news-text { color: #333; font-size: 1.08rem; }
+    @media (max-width: 900px) {
+      .news-item { flex-direction: column; gap: 1rem; }
+      .news-img { width: 100%; height: 180px; }
+      .container { padding: 1.2rem; }
+    }
+    footer { background: #003f6b; color: #fff; text-align: center; padding: 2rem 1rem 1rem 1rem; margin-top: 2rem; border-radius: 0 0 10px 10px;}
+    .footer-social { margin: 1rem 0; }
+    .footer-social a { display: inline-block; margin: 0 0.5rem; }
+    .footer-social img { width: 32px; height: 32px; vertical-align: middle; }
+    .footer-contact { margin-top: 1rem; font-size: 1.05rem; }
+    nav { background: #003f6b; padding: 1rem; text-align: center; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: #ffd700; }
+    .dropdown { display: inline-block; position: relative; }
+    .dropbtn { color: #fff; background: none; border: none; font-weight: bold; font-size: 1rem; cursor: pointer; text-decoration: none; padding: 0; margin: 0 1rem; }
+    .dropdown-content { display: none; position: absolute; background: #005baa; min-width: 180px; box-shadow: 0 8px 16px rgba(0,0,0,0.10); border-radius: 0 0 8px 8px; top: 100%; left: 0; z-index: 100; }
+    .dropdown-content a { color: #fff; padding: 1rem 1.2rem; text-decoration: none; display: block; font-weight: normal; border-bottom: 1px solid #0072ce; transition: background 0.2s; }
+    .dropdown-content a:last-child { border-bottom: none; }
+    .dropdown-content a:hover { background: #0072ce; color: #ffd700; }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { display: block; }
+    nav > a, nav > .dropdown { vertical-align: middle; }
+  </style>
+</head>
+<header style="background: #fff; padding: 1.5rem 0 0 0; border-bottom: 8px solid #b71c1c;">
+  <div style="display: flex; align-items: center; justify-content: center; max-width: 1200px; margin: 15px auto;">
+    <img src="logo/logo.png" alt="Logo Mission Salésienne Don Bosco Kara" style="height: 80px;">
+
+  </div>
+  <div style="width:100%;overflow:hidden;margin-top:0;">
+    <img src="IMAGE/img%20en%20tete.jpg" alt="Bannière Don Bosco Kara" style="width:100%;display:block;object-fit:cover;max-height:220px;">
+  </div>
+  <nav>
+  <a href="index.html">Accueil</a>
+  <a href="ong.html">ONG</a>
+  <a href="paroisse.html">Paroisse</a>
+  <a href="centre-formation.html">Centre de Formation</a>
+  <a href="college-lycee.html">Collège & Lycée</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Foyer ▼</a>
+    <div class="dropdown-content">
+      <a href="foyer-immaculee.html">Foyer Immaculée</a>
+      <a href="foyer-jean-paul-ii.html">Foyer Jean Paul II</a>
+    </div>
+  </div>
+  <a href="oratorio.html">Oratorio</a>
+  <a href="pastorale.html">Pastorale</a>
+  <a href="actualité.html">Actualités</a>
+  <a href="autres.html">Autres</a>
+</nav>
+</header>
+<body>
+  
+  <div class="container">
+    <h2>Actualités du Foyer Jean Paul II Don Bosco Kara</h2>
+    <div class="news-list">
+      <div class="news-item">
+        <img src="img/foyer-jean-paul-ii-1.jpg" alt="Rencontre fraternelle" class="news-img">
+        <div class="news-content">
+          <div class="news-title">Rencontre fraternelle et partage d’expériences</div>
+          <div class="news-date">10 juin 2025</div>
+          <div class="news-text">
+            Les résidents du foyer ont partagé leurs parcours et leurs rêves lors d’une soirée conviviale, favorisant l’écoute et la solidarité entre jeunes.
+          </div>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="img/foyer-jean-paul-ii-2.jpg" alt="Atelier informatique" class="news-img">
+        <div class="news-content">
+          <div class="news-title">Atelier informatique : initiation au numérique</div>
+          <div class="news-date">25 mai 2025</div>
+          <div class="news-text">
+            Un atelier a permis aux jeunes de découvrir les bases de l’informatique et d’Internet, essentiel pour leur réussite scolaire et professionnelle.
+          </div>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="img/foyer-jean-paul-ii-3.jpg" alt="Sortie nature" class="news-img">
+        <div class="news-content">
+          <div class="news-title">Sortie nature et sensibilisation à l’environnement</div>
+          <div class="news-date">14 mai 2025</div>
+          <div class="news-text">
+            Les jeunes ont participé à une sortie éducative sur la protection de l’environnement, avec plantation d’arbres et collecte de déchets.
+          </div>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="img/foyer-jean-paul-ii-4.jpg" alt="Veillée de prière" class="news-img">
+        <div class="news-content">
+          <div class="news-title">Veillée de prière et méditation</div>
+          <div class="news-date">2 mai 2025</div>
+          <div class="news-text">
+            Une veillée de prière a rassemblé les jeunes autour de la méditation, du chant et du recueillement, renforçant leur foi et leur unité.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <footer>
+    <div class="footer-social">
+    <a href="https://www.facebook.com/Paroisse.JBK/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+       <a href="https://wa.me/70239862" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://www.tiktok.com/@paroisse.saint.je4?_t=ZM-8xU39hlMXK9&_r=1" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="32" height="32">
+      </a>
+    </div>      
+    <div class="footer-contact">
+      <strong>Adresse :</strong> Quartier Don Bosco, Kara, Togo<br>
+      <strong>Téléphone :</strong> +228 70239862<br>
+      <strong>Email :</strong> dt.kara.donbosco.aos@gmail.com
+    </div>
+    <div style="margin-top:1rem;">
+      &copy; 2025 Paroisse Don Bosco Kara. Tous droits réservés.
+    </div>
+  </footer>
+  <script>
+    // Menu déroulant dynamique pour "Foyer"
+    document.querySelectorAll('.dropdown').forEach(function(drop){
+      drop.addEventListener('mouseenter', function() {
+        this.querySelector('.dropdown-content').style.display = 'block';
+      });
+      drop.addEventListener('mouseleave', function() {
+        this.querySelector('.dropdown-content').style.display = 'none';
+      });
+      drop.querySelector('.dropbtn').addEventListener('focus', function() {
+        drop.querySelector('.dropdown-content').style.display = 'block';
+      });
+      drop.querySelector('.dropbtn').addEventListener('blur', function() {
+        setTimeout(() => drop.querySelector('.dropdown-content').style.display = 'none', 200);
+      });
+    });
+    // Affichage dynamique de l'année dans le footer
+    document.addEventListener('DOMContentLoaded', function() {
+      const year = new Date().getFullYear();
+      document.querySelectorAll('footer').forEach(function(footer){
+        footer.innerHTML = footer.innerHTML.replace(/202\d/, year);
+      });
+    });
+  </script>
+  <script src="java.js"></script>
+</body>
+</html>

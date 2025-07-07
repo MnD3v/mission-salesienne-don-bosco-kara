@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie d'Images – Paroisse Don Bosco Kara</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #946612; }
+    header { background-image: url('IMAGE/img en tete.jpg'); color: #251966;background-color: #333; padding: 2rem 1rem 1rem 1rem; text-align: center; }
+    header img { height: 70px; margin-bottom: 0.5rem; display: block; margin-left: auto; margin-right: auto; }
+    nav { background: #003f6b; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 100; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: #ffd700; }
+    .container { max-width: 1000px; margin: 2rem auto; background: #fff; padding: 2.5rem 2rem; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.08);}
+    h2 { color: #005baa; margin-top: 0; }
+    .parish-hero { display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; margin-bottom: 2.5rem; }
+    .parish-hero img { width: 340px; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,91,170,0.10);}
+    .parish-hero-content { flex: 1; min-width: 260px; }
+    .parish-hero-content h2 { margin-top: 0; }
+    .parish-hero-content p { font-size: 1.13rem; color: #333; }
+    .action-links { display: flex; gap: 1.5rem; justify-content: center; margin: 2.5rem 0 2.5rem 0; flex-wrap: wrap; }
+    .action-link { background: linear-gradient(90deg,#005baa 60%,#0072ce 100%); color: #fff; padding: 0.9rem 2rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 8px rgba(0,91,170,0.08); transition: background 0.2s, transform 0.2s; display: flex; align-items: center; gap: 0.7rem; }
+    .action-link:hover { background: linear-gradient(90deg,#0072ce 60%,#005baa 100%); transform: translateY(-3px) scale(1.04); color: #fff; text-decoration: none; }
+    .action-link img { width: 26px; height: 26px; vertical-align: middle; }
+    .dynamic-section { margin-top: 2.5rem; padding: 1.5rem; background: #f1f6fa; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,91,170,0.06); display: none; animation: fadeIn 0.6s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .show { display: block; }
+    .dynamic-section h3 { color: #005baa; margin-top: 0; }
+    .dynamic-section p { color: #333; }
+    .dynamic-section .placeholder { color: #888; font-style: italic; margin-top: 1rem; }
+    .parish-values { margin: 2.5rem 0 1.5rem 0; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;}
+    .parish-value { background: #e9ecef; border-radius: 10px; padding: 1.2rem 1.5rem; min-width: 220px; max-width: 320px; text-align: center; box-shadow: 0 1px 6px rgba(0,91,170,0.06);}
+    .parish-value h4 { color: #0072ce; margin-bottom: 0.5rem;}
+    .parish-value p { color: #444; font-size: 1.05rem;}
+    .quote { font-style: italic; color: #0072ce; margin: 2.5rem 0 1.5rem 0; text-align: center; font-size: 1.15rem;}
+    footer { background: #003f6b; color: #fff; text-align: center; padding: 2rem 1rem 1rem 1rem; margin-top: 2rem; border-radius: 0 0 10px 10px;}
+    .footer-social { margin: 1rem 0; }
+    .footer-social a { display: inline-block; margin: 0 0.5rem; }
+    .footer-social img { width: 32px; height: 32px; vertical-align: middle; }
+    .footer-contact { margin-top: 1rem; font-size: 1.05rem; }
+    @media (max-width: 900px) {
+      .parish-hero { flex-direction: column; }
+      .container { padding: 1.2rem; }
+    }
+     .gallery-grid {
+    display: flex;
+    flex-direction: row; /* disposition horizontale */
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .gallery-item {
+    background: #f1f6fa;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,91,170,0.06);
+    padding: 1rem;
+    width: 260px;
+    max-width: 98vw;
+    text-align: center;
+  }
+  .gallery-item img {
+    width: 100%;
+    max-width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+  }
+  </style>
+</head>
+<header style="background: #fff; padding: 1.5rem 0 0 0; border-bottom: 8px solid #b71c1c;">
+  <div style="display: flex; align-items: center; justify-content: center; max-width: 1200px; margin: 15px auto;">
+    <img src="logo/logo.png" alt="Logo Mission Salésienne Don Bosco Kara" style="height: 80px;">
+    
+  </div>
+  <div style="width:100%;overflow:hidden;margin-top:0;">
+    <img src="IMAGE/img%20en%20tete.jpg" alt="Bannière Don Bosco Kara" style="width:100%;display:block;object-fit:cover;max-height:220px;">
+  </div>
+  <nav>
+  <a href="index.html">Accueil</a>
+  <a href="ong.html">ONG</a>
+  <a href="paroisse.html">Paroisse</a>
+  <a href="centre-formation.html">Centre de Formation</a>
+  <a href="college-lycee.html">Collège & Lycée</a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">Foyer ▼</a>
+    <div class="dropdown-content">
+      <a href="foyer-immaculee.html">Foyer Immaculée</a>
+      <a href="foyer-jean-paul-ii.html">Foyer Jean Paul II</a>
+    </div>
+  </div>
+  <a href="oratorio.html">Oratorio</a>
+  <a href="pastorale.html">Pastorale</a>
+  <a href="actualité.html">Actualités</a>
+  <a href="autres.html">Autres</a>
+</nav>
+</header>
+<body>
+ 
+<style>
+  nav {
+    position: relative;
+    z-index: 10;
+  }
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropbtn {
+    color: #fff;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 1rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: #005baa;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.10);
+    border-radius: 0 0 8px 8px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+  .dropdown-content a {
+    color: #fff;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid #0072ce;
+    transition: background 0.2s;
+  }
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  .dropdown-content a:hover {
+    background: #0072ce;
+    color: #ffd700;
+  }
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  /* Pour garder l'alignement des liens */
+  nav > a, nav > .dropdown {
+    vertical-align: middle;
+  }
+</style>
+  <div class="container">
+    <h2>Galerie d'Images</h2>
+    <div class="gallery-grid" id="gallery">
+      <!-- Exemple d'image (à remplacer ou dupliquer) -->
+      <!--
+      <div class="gallery-item">
+        <img src="LIEN_IMAGE" alt="Description">
+        <div class="caption">Description ou légende</div>
+      </div>
+      -->
+    </div>
+    <div class="container">
+  <h2>Galerie d'Images</h2>
+  <div class="gallery-grid" id="gallery">
+    <!-- Les images s'affichent ici -->
+     <!-- <img src="IMAGE/img/JEAN PAUL II (2).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jean-Paul II.jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/JEAN PAUL II (2).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jean paul II.jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/JEAN PAUL II (1).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jpd (1).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jpd (2).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jpd (3).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jpd (4).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);">
+     <img src="IMAGE/img/jpd (5).jpg" alt="" style="width:100%;max-width:400px;height:auto;border-radius:10px;box-shadow:0 1px 6px rgba(0,91,170,0.06);"> -->
+  </div>
+  <div id="gallery-table-container" style="margin:2.5rem 0;">
+    <!-- Le tableau des images s'affichera ici -->
+  </div>
+  <div class="add-image">
+    <h3>Ajouter une image</h3>
+    <input type="text" id="imgUrl" placeholder="Collez ici le lien de l'image (URL)">
+    <input type="text" id="imgCaption" placeholder="Légende (facultatif)">
+    <br>
+    <button onclick="addImage()">Ajouter</button>
+  </div>
+</div>
+
+<script>
+  // Mot de passe pour l'accès réservé
+ // Images par défaut à afficher lors de la première visite
+const defaultImages = [
+  { url: "IMAGE/img/JEAN PAUL II (2).jpg", caption: "Jean Paul II - 1" },
+  { url: "IMAGE/img/jean-Paul II.jpg", caption: "Jean Paul II - 2" },
+  { url: "IMAGE/img/JEAN PAUL II (2).jpg", caption: "Jean Paul II - 3" },
+  { url: "IMAGE/img/jean paul II.jpg", caption: "Jean Paul II - 4" },
+  { url: "IMAGE/img/jpd (1).jpg", caption: "Jean Paul II - 6" },
+  { url: "IMAGE/img/jpd (2).jpg", caption: "Jean Paul II - 7" },
+  { url: "IMAGE/img/jpd (3).jpg", caption: "Jean Paul II - 8" },
+  { url: "IMAGE/img/jpd (4).jpg", caption: "Jean Paul II - 9" },
+  { url: "IMAGE/img/jpd (5).jpg", caption: "Jean Paul II - 10" }
+];
+
+const AUTHORIZED_PASSWORD = "donbosco2025";
+let isAuthorized = false;
+
+function saveImagesToStorage(images) {
+  localStorage.setItem('foyer_jean_paul_ii_gallery_images', JSON.stringify(images));
+}
+
+function loadImagesFromStorage() {
+  const data = localStorage.getItem('foyer_jean_paul_ii_gallery_images');
+  if (data) {
+    try {
+      return JSON.parse(data);
+    } catch {
+      return [];
+    }
+  }
+  // Si aucune image n'est en localStorage, on initialise avec les images par défaut
+  saveImagesToStorage(defaultImages);
+  return [...defaultImages];
+}
+
+function renderGallery() {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
+  const images = loadImagesFromStorage();
+  images.forEach((img, idx) => {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `
+      <img src="${img.url}" alt="${img.caption || 'Image'}">
+      <div class="caption">${img.caption || ''}</div>
+      ${isAuthorized ? `<button class="delete-btn" onclick="deleteImage(${idx})" style="margin-top:8px;background:#d32f2f;color:#fff;border:none;border-radius:5px;padding:0.4rem 1.2rem;cursor:pointer;">Supprimer</button>` : ''}
+    `;
+    gallery.appendChild(div);
+  });
+  renderGalleryTable();
+}
+
+function renderGalleryTable() {
+  const images = loadImagesFromStorage();
+  const container = document.getElementById('gallery-table-container');
+  if (!isAuthorized || images.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  let html = `<table style="width:100%;border-collapse:collapse;text-align:left;">
+    <thead>
+      <tr style="background:#f1f6fa;">
+        <th style="padding:8px;border:1px solid #ccc;">Image</th>
+        <th style="padding:8px;border:1px solid #ccc;">Légende</th>
+        <th style="padding:8px;border:1px solid #ccc;">Action</th>
+      </tr>
+    </thead>
+    <tbody>`;
+  images.forEach((img, idx) => {
+    html += `<tr>
+      <td style="padding:8px;border:1px solid #ccc;"><img src="${img.url}" alt="" style="width:80px;height:60px;object-fit:cover;border-radius:4px;"></td>
+      <td style="padding:8px;border:1px solid #ccc;">${img.caption || ''}</td>
+      <td style="padding:8px;border:1px solid #ccc;">
+        <button onclick="deleteImage(${idx})" style="background:#d32f2f;color:#fff;border:none;border-radius:5px;padding:0.3rem 1rem;cursor:pointer;">Supprimer</button>
+      </td>
+    </tr>`;
+  });
+  html += `</tbody></table>`;
+  container.innerHTML = html;
+}
+
+function addImage() {
+  if (!isAuthorized) {
+    alert("Vous n'êtes pas autorisé à ajouter des images.");
+    return;
+  }
+  const url = document.getElementById('imgUrl').value.trim();
+  const caption = document.getElementById('imgCaption').value.trim();
+  if (!url) return alert("Veuillez entrer le lien de l'image.");
+  const images = loadImagesFromStorage();
+  images.push({ url, caption });
+  saveImagesToStorage(images);
+  renderGallery();
+  document.getElementById('imgUrl').value = '';
+  document.getElementById('imgCaption').value = '';
+}
+
+function deleteImage(idx) {
+  if (!isAuthorized) {
+    alert("Vous n'êtes pas autorisé à supprimer des images.");
+    return;
+  }
+  if (!confirm("Voulez-vous vraiment supprimer cette image ?")) return;
+  const images = loadImagesFromStorage();
+  images.splice(idx, 1);
+  saveImagesToStorage(images);
+  renderGallery();
+}
+
+function showAddImageForm() {
+  document.querySelector('.add-image').style.display = 'block';
+  renderGallery();
+}
+
+function hideAddImageForm() {
+  document.querySelector('.add-image').style.display = 'none';
+  renderGallery();
+}
+
+function askPassword() {
+  const pwd = prompt("Veuillez entrer le mot de passe pour ajouter/supprimer des images :");
+  if (pwd === AUTHORIZED_PASSWORD) {
+    isAuthorized = true;
+    showAddImageForm();
+  } else {
+    isAuthorized = false;
+    hideAddImageForm();
+    alert("Accès refusé.");
+  }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  // Initialisation unique des images par défaut si jamais le stockage est vide
+  if (!localStorage.getItem('foyer_jean_paul_ii_gallery_images')) {
+    saveImagesToStorage(defaultImages);
+  }
+  renderGallery();
+  hideAddImageForm();
+  // Affiche un bouton pour demander l'accès
+  const btn = document.createElement('button');
+  btn.textContent = "Ajouter ou supprimer une image (Accès réservé)";
+  btn.style = "margin:2rem auto;display:block;background:#0072ce;color:#fff;border:none;border-radius:6px;padding:0.7rem 2rem;font-weight:600;cursor:pointer;";
+  btn.onclick = askPassword;
+  document.querySelector('.add-image').parentNode.insertBefore(btn, document.querySelector('.add-image'));
+});
+</script>
+  </div>
+  <footer>
+    <div class="footer-social">
+    <a href="https://www.facebook.com/Paroisse.JBK/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+       <a href="https://wa.me/70239862" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://www.tiktok.com/@paroisse.saint.je4?_t=ZM-8xU39hlMXK9&_r=1" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="32" height="32">
+      </a>
+    </div>      
+    <div class="footer-contact">
+      <strong>Adresse :</strong> Quartier Don Bosco, Kara, Togo<br>
+      <strong>Téléphone :</strong> +228 70239862<br>
+      <strong>Email :</strong> dt.kara.donbosco.aos@gmail.com
+    </div>
+    <div style="margin-top:1rem;">
+      &copy; 2025 Paroisse Don Bosco Kara. Tous droits réservés.
+    </div>
+  </footer>
+  <script>
+// --- Menu déroulant responsive pour "Foyer" ---
+document.querySelectorAll('.dropdown').forEach(function(drop){
+  drop.addEventListener('mouseenter', function() {
+    this.querySelector('.dropdown-content').style.display = 'block';
+  });
+  drop.addEventListener('mouseleave', function() {
+    this.querySelector('.dropdown-content').style.display = 'none';
+  });
+  // Accessibilité clavier
+  drop.querySelector('.dropbtn').addEventListener('focus', function() {
+    drop.querySelector('.dropdown-content').style.display = 'block';
+  });
+  drop.querySelector('.dropbtn').addEventListener('blur', function() {
+    setTimeout(() => drop.querySelector('.dropdown-content').style.display = 'none', 200);
+  });
+});
+
+// --- Scroll doux pour les ancres internes ---
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+  link.addEventListener('click', function(e){
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior: "smooth"});
+    }
+  });
+});
+
+// --- Affichage dynamique de l'année dans le footer ---
+document.addEventListener('DOMContentLoaded', function() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('footer').forEach(function(footer){
+    footer.innerHTML = footer.innerHTML.replace(/202\d/, year);
+  });
+});
+
+// --- Menu mobile (si besoin, à adapter selon ton HTML) ---
+if(window.innerWidth < 900){
+  const nav = document.querySelector('nav');
+  if(nav && !document.getElementById('menu-toggle')){
+    const btn = document.createElement('button');
+    btn.id = 'menu-toggle';
+    btn.textContent = '☰ Menu';
+    btn.style = 'background:#0072ce;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1.2rem;margin-bottom:1rem;cursor:pointer;';
+    nav.parentNode.insertBefore(btn, nav);
+    nav.style.display = 'none';
+    btn.onclick = function(){
+      nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+    };
+  }
+}
+</script>
+  <script src="java.js"></script>
+</body>
+</html>
